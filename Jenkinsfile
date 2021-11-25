@@ -19,8 +19,7 @@ pipeline{
             }
         }
        stage('Test and Build'){
-	        parallel{
-		        stage('Test the code'){	          
+	            stage('Test the code'){	          
 		            steps{
 		                withMaven(maven: 'MAVEN_3.6'){
 		                   //bat 'mvn test'
@@ -36,7 +35,7 @@ pipeline{
 		                }
 		            }
 		        }        
-	         } //end of parallel block
+	       
 	     }//end of parent stage block
     }
     
